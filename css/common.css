@@ -1,0 +1,382 @@
+@charset "ut-8";
+
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+.hidden, legend, caption {
+    position: absolute;
+    left: -9999px;
+}
+
+/*웹 폰트 다운로드 */
+@font-face {
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*링크스타일*/
+a:link {
+    color : #4f4f4f;
+    text-decoration: none;
+}
+a:visited {
+    color: #8a8e91;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: #4f4f4f;
+    text-decoration: none;
+}
+
+/*기본스타일 (바디전체)*/
+body {
+    color: black;
+    background-color: white;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: "Noto Sans KR";
+}
+
+/*전체적인 레이아웃*/
+#header, #visual, #contentsArea, #slogan, #footerInner {  
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align: justify;
+}
+/*헤더 영역*/
+#header {
+    position: relative;  /*헤어와 비주얼은 높이를 줌, 콘텐츠는 안줌 부몬의 포지션은 relative로 줌*/  
+}
+#header .nameHome {
+    position: relative;
+    left: 100px; /* 왼쪽으로 100px 이동 */
+    top: 30px; /* 아래로 50px 이동 */
+}
+
+#header .inforLink { /*탑메뉴*/
+    text-align: right;
+    padding-right: 5%;
+}
+
+#header .inforLink li {
+    display: inline-block; /* li 요소를 가로로 정렬 */
+}
+
+#header .inforLink li a i {
+    display: block; /* i 요소를 블록 요소로 변경하여 가로 정렬 */
+    font-size: 1.2em;
+    color: black;
+    margin-top: 20px;
+    margin-right: 20px; 
+}
+#header .infoLink a::before {
+    padding-right: 8px;
+}
+#header .inforLink li a {
+    color: black; /* 기본 색상 */
+    text-decoration: none; /* 밑줄 없앰 */
+}
+
+/*아이콘 호버시 색상변경인디 왜 안디양*/
+.inforLink li a {
+    color: black; 
+    text-decoration: none;
+}
+
+.inforLink li a:hover i {
+    color: #4f4f4f; 
+}
+
+
+#header .mainMenu li, #header .mainMenu a {
+    display: inline-block;
+}
+#header .mainMenu{
+    position: relative;
+    font-size: 1.2em;
+    bottom: 70px;
+    padding-left: 40%;
+
+}
+#header .mainMenu>li { 
+    position: relative;
+    margin-right: 20px;
+}
+#header .mainMenu > li > a {
+    font-size: 1.2em;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+    color: black;
+    padding-right: 30px;
+}
+
+#header .mainMenu>li:hover>a, #header .mainMenu>li:focus>a {
+    color: #ccc;
+    text-decoration: none;/* 호버 상태일 때 밑줄 제거 */
+}
+ 
+#header .mainMenu>li>a:hover::after, #header .mainMenu>li>a:focus::after {
+    content: "";
+    display: block;
+    background-color: #000;
+    height: 2px;
+    width: 100%;
+    position: relative;
+    top: 12px;
+}
+#header .mainMenu u li {
+    color: #000;
+}
+#header .mainMenu ul a {
+    padding: 8px 0 7px 15px;
+}
+#header .mainMenu ul a:hover::before, #header .mainMenu ul a:focus::before {
+    color: darkgray;
+    text-decoration: none;
+
+}
+#header .mainMenu ul {
+    display: none;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 10;
+}
+#header .mainMenu>li:hover ul {
+    display: block;
+    text-decoration: none;
+}
+
+#header .mainMenu>li a:hover {
+    text-decoration: none;
+} 
+
+/* 하위 메뉴의 크기를 조정하는 스타일 */
+#header .mainMenu ul {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding-left: 10px;
+    padding-top: 30px;
+    border-radius: 5px; 
+    left: 0; /* 메뉴의 왼쪽에 배치 */
+    top: calc(100% + 5px); 
+}
+
+
+/* 모든 사진에 적용되는 스타일 */
+#header .mainMenu ul li img {
+    width: 120px; 
+    height: 147px; 
+    display: block;
+    margin: 0 auto 10px; 
+}
+
+/* 첫 번째 사진에만 적용되는 스타일 */
+#header .mainMenu ul li:first-child img {
+    width: 120px; 
+    height: auto; 
+    margin-right: 30px; /* 오른쪽 여백 추가 */
+}
+
+#header .mainMenu ul li {
+    text-align: center; /* 텍스트 가운데 정렬 */
+    margin-bottom: 10px; /* 이미지와 텍스트 간격 추가 */
+}
+
+#header .mainMenu > li ul {
+    top: 100%; /* 첫 번째 상위 메뉴 아래에 배치 */
+}
+
+
+#header .mainMenu li:hover > ul {
+    display: block;
+    top: 100%; /* 상위 메뉴 아래에 표시 */
+    text-decoration: none;
+}
+
+/* 하위 메뉴의 텍스트와 이미지를 가로로 정렬 */
+#header .mainMenu ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+/* 하위 메뉴의 이미지 스타일 */
+#header .mainMenu ul li img {
+    vertical-align: middle; /* 이미지를 텍스트와 수직으로 가운데 정렬 */
+    margin-right: 10px; /* 이미지 오른쪽 여백 추가 */
+}
+
+/* 하위 메뉴의 텍스트 스타일 */
+#header .mainMenu ul li a {
+    color: white; /* 기본 색상 */
+    text-decoration: none; /* 밑줄 없앰 */
+}
+
+/* 하위 메뉴의 항목에 호버시 색상 변경 */
+#header .mainMenu ul li:hover a {
+    color: #ccc; /* 호버 시 색상 변경 */
+    text-decoration: none;
+}
+.mainMenu li {
+    position: relative;
+}
+
+.mainMenu li img {
+    display: block;
+    margin: 0 auto; /* 이미지를 가운데 정렬 */
+}
+
+.mainMenu li a {
+    display: block;
+    text-align: center; /* 텍스트 가운데 정렬 */
+    margin-top: 5px; /* 이미지와 텍스트 간격 조절 */
+}
+
+/* 하위 메뉴의 첫 번째 이미지 스타일 */
+#header .mainMenu ul li:first-child img {
+    margin-right: 20px; /* 오른쪽으로 20px 떨어지도록 설정 */
+}
+
+/* 모든 하위 메뉴의 크기를 조정하는 스타일 */
+#header .mainMenu ul li {
+    width: 120px; /* 각 하위 메뉴의 너비 */
+    padding-left: 13px;
+}
+
+/*비주얼영역*/
+#mainVideo {
+    position: absolute;
+    margin-top: -60px;
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+#contentsArea {    
+    padding-top: 40%; /* 비주얼 영역과의 간격을 조절합니다. */
+    margin-top: 100px; /* 비주얼 영역과의 간격을 조절합니다. */
+    text-align: center;
+}
+
+.about {
+    display: flex; /* 요소들을 플렉스박스로 배치 */
+    align-items: center; /* 세로 가운데 정렬 */
+    justify-content: center; /* 가로 가운데 정렬 */
+    text-align: left;
+
+}
+
+.abouatN {
+    margin-right: 20%; 
+    font-size: 3em;
+}
+
+/*푸터영역*/
+
+#footerCategoray {
+    margin-top: 5%;
+    padding: 5%;
+    justify-content: center;
+    align-items: center; /* 세로 가운데 정렬 */
+    text-align: center; /* 가운데 정렬 */
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(64, 63, 63);
+    border-top: 2px solid #4f4f4f;
+    border-bottom: 2px solid #4f4f4f;
+    background-color: #f0f0f0;
+}
+
+.footerSeletion1, .footerSeletion2, .footerSeletion3, .footerSeletion4 {
+    display: inline-block; 
+    text-align: left;
+    vertical-align: top; 
+    margin: 0 30px; /* 좌우 여백 추가 */
+    margin-right: 10px; 
+}
+
+.footerSeletion1 button, .footerSeletion2 button, .footerSeletion3 button, .footerSeletion4 button {
+    display: block; 
+    margin-bottom: 10px; 
+    background-color: rgba(220, 220, 220, 0.827); /* 배경색 지정 */
+    padding: 5px 10px; /* 내부 여백 지정 */
+    border: none; 
+    border-radius: 5px; /* 모서리 둥글게 만듦 */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+}
+
+.footerSeletion1 button, .footerSeletion2 button, .footerSeletion3 button, .footerSeletion4 button {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    background-color: #cecccc;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.footerSeletion1,
+.footerSeletion2,
+.footerSeletion3,
+.footerSeletion4 {
+    margin-right: 1%;
+}
+.footerSeletion1 ul,
+.footerSeletion2 ul,
+.footerSeletion3 ul,
+.footerSeletion4 ul {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.footerSeletion1 ul li,
+.footerSeletion2 ul li,
+.footerSeletion3 ul li,
+.footerSeletion4 ul li {
+    display: block;
+    margin-bottom: 40px;
+}
+
+
+.companyinfo {
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: left;
+    color: #4f4f4f;
+}
+.footerbrand {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-align: left;
+    margin-right: 5%;
+}
+
+/* 버튼에 호버 효과 추가 */
+.footerSeletion1 button:hover,
+.footerSeletion2 button:hover,
+.footerSeletion3 button:hover,
+.footerSeletion4 button:hover {
+    background-color: #848383;
+    color: #000; 
+    font-weight: bold;
+}
+
+/* 리스트 아이템에 호버 효과 추가 */
+.footerSeletion1 ul li a:hover,
+.footerSeletion2 ul li a:hover,
+.footerSeletion3 ul li a:hover,
+.footerSeletion4 ul li a:hover {
+    color: black;
+}

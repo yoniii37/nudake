@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nudake</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css"> 
+    <title>Bootstrap Icons</title>
+    <!-- 부트스트랩 CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        
+    </style>
+    <script>
+        window.onload = function() {
+            var video =document.getElementById("mainVideo")
+            video.src="images/NUDAKE HOLIDAY.mp4";
+            video.play();
+        };
+    </script>
+</head>
+<body>
+    <!-- wrapper 영역 시작 (페이지의 배경, 여백, 패딩 등을 설정)-->
+    <div id="wrapper">
+        <!-- 헤더 영역 시작 (로고(홈페이지이름), 탑메뉴, 메인메뉴)-->
+        <header id="header">
+            <h1 class="logo"><!-- 홈페이지 이름 설정 -->
+                <a href="nudake.html"> <!-- 홈페이지 이름 -->
+                </a>
+            </h1>
+            
+        <div class="menuContainer">
+
+            <!-- 탑메뉴 설정 외쪽으로-->    
+            <h1 class="nameHome">NUDAKE</h1>
+            <ul class="inforLink">
+                <li><a href="#"><i class="fas fa-home"></i><span class="text-hide">홈</span></a></li>
+                <li><a href="#"><i class="fas fa-search"></i><span class="text-hide">검색</span></a></li>
+                <li><a href="#"><i class="fas fa-heart"></i><span class="text-hide">관심목록</span></a></li>
+            </ul>
+           
+            <!-- 메인메뉴 설정 -->
+            <nav>
+                <h2 class="hidden">메인메뉴</h2>
+                <ul class="mainMenu">
+                    <li>
+                        <a href="#">Nudake</a> <!--상위 메뉴-->
+                        <ul class="aboutNudake"> <!-- 하위 메뉴 -->
+                            <li>
+                                <img src="images/nudakelogooo.jpg" width="120px" alt="logo">
+                                <a href="#">Nudake?</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Concept</a> <!--상위 메뉴-->
+                        <ul class="Concept">  <!-- 하위 메뉴 -->
+                            <li>
+                                <img src="images/orgin.jpg" width="120px" height="147px" alt="orginpicture">
+                                <a href="#">Orign</a>
+                            </li>
+                            <li>
+                                <img src="images/flower1.jpg" width="120px" height="147px" alt="orginpictureflower1">
+                                <a href="#">Refrence</a>
+                            </li>
+                            <li>
+                                <img src="images/in5.jpg"  width="120px" height="147px"  alt="gym5">
+                                <a href="#">Season</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Dessert</a> <!--상위 메뉴-->
+                        <ul class="Dessert"> <!-- 하위 메뉴 -->
+                            <li>
+                                <img src="images/coffe.png"  width="120px" height="147px"  alt="coffee">
+                                <a href="#">Coffee</a>
+                            </li>
+                            <li>
+                                <img src="images/sigcro.png"  width="120px" height="147px"  alt="scro">
+                                <a href="#">Signature</a>
+                            </li>
+                            <li>
+                                <img src="images/this.jpg"  width="120px" height="147px"  alt="trcrp">
+                                <a href="#">Cake</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Store</a> <!--상위 메뉴-->
+                        <ul class="store"><!-- 하위 메뉴 -->
+                            <li>
+                                <img src="images/sungsu.jpg"  width="120px" height="147px"  alt="trcrp">
+                                <a href="#">Dosan</a>
+                            </li>
+                            <li>
+                                <img src="images/sanghi.webp"  width="120px" height="147px"  alt="trcrp">
+                                <a href="#">Sanghi</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>  
+            
+        </div>
+     
+        </header> <!-- 헤더영역 종료 -->
+          
+        <!-- 비주얼 영역 시작 (홈페이지 메인과 헤더사이의 비주얼(회사의 아이덴티)) -->      
+        <div id="visual">
+            <video id="mainVideo" autoplay muted loop>
+                <source src="images/NUDAKE HOLIDAY.mp4">
+            </video>
+        </div>
+        <!-- 비주얼 영역 종료-->
+        
+        <!-- 콘텐츠 영역 시작 (홈페이지의 주된 본문) -->
+        <div id="contentsArea">
+            <div id="nudkeAbout">
+                <section class="about">
+                    <h3 class="abouatN">New<br> Different<br> cake<br></h3>
+                    <img class="aboutImg" src="images/nudakelogooo.jpg" alt="logo">
+                </section>
+            </div>
+        </div>
+
+        <!-- 푸터 영역 시작(홈페이지 아래부분 주소 이메일 기타등등 ) -->        
+        <footer id="footer">
+           <div id="footerCategoray">
+                <div class="footerSeletion1">
+                    <button type="button" class="storeIfor">매장안내</button>
+                    <ul>
+                        <li><a href="#">대한민국</a></li>
+                        <li><a href="#">중국</a></li>
+                    </ul>
+                </div>
+                <div class="footerSeletion2">
+                    <button type="button" class="customerServies">고객서비스</button>
+                    <ul>
+                        <li><a href="#">비회원주문</a></li>
+                        <li><a href="#">교환 및 반품</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                        <li><a href="#">1:1문의하기</a></li>
+                    </ul>
+                </div>
+                <div class="footerSeletion3">
+                    <button type="button" class="office">법적 고지</button>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+                <div class="footerSeletion4">
+                    <button type="button" class="socialMdeia">소셜 미디어</button>
+                    <ul>
+                        <li><a href="#">인스타그램</a></li>
+                        <li><a href="#">카카오톡</a></li>
+                        <li><a href="#">페이스북</a></li>
+                        <li><a href="#">웨이보</a></li>
+                    </ul>
+                </div>
+            </div>       
+                <div class="companyinfo">
+                    <div class="comInfo">
+                        주)누데이크 | 사업자등록번호 : 111-1111-11 | 대표자 : 누데이크 | 서울특별시 강남구 압구정로46길 50 | <br> 대표번호 : 02-000-000 | 이메일 : Cs@nudake.com |개인정보 보호 | 호스팅 서비스 사업자 |<br>  통신판매업신고 : 제 2024-서울-1111호 사업자 정보확인
+                    </div>
+                </div>
+            
+            <div class="footerbrand">©Nudake</div>
+          
+        </footer>   
+
+
+             <!-- 콘테츠 영역 종료 -->
+
+
+    
+    </div><!-- wrapper 영역 종료-->
+    
+</body>
+</html>
